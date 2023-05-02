@@ -25,8 +25,9 @@ vector <complex<double> > W(q);                 // order parameter weights (?)
 
 // lattice handling: 
 enum dirs{RIGHT,LEFT};
-int indx(int x, int y){ return y * L + x; }                    // Make an index on every site 
-int xpos(int i){ return i%L; }
+int indx(int x){return x;}
+// int indx(int x, int y){ return y * L + x; }                    // Make an index on every site 
+int xpos(int i){ return i%L;}
 // int ypos(int i){ return ;}
 
 int Nbr(int i, int dir) {
