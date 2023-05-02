@@ -6,12 +6,11 @@
 
 #include<iomanip>
 #include<fstream>
+#include "writing_functions.h"
 
 using namespace std;
 #define PI 3.141592653589793238462643
 
-// ERROR CODE
-#define ERR_FILE -2
 
 int power(int base, int exp) {
     int result = 1;
@@ -76,9 +75,6 @@ void FlipandBuildFrom(int s, double pconnect) {
     }
 }
 
-string makePrefix(int q, int N, double T);
-
-int writeCorrelation(string prefix, complex<double> *corr_func);
 
 int main() 
 {
@@ -158,7 +154,7 @@ int main()
             string prefix = makePrefix(q, L, T);
 
             if (NDIMS == 1 && (T == 0.25 || T == 0.5)) {
-                if (writeCorrelation(prefix, corr_func))
+                if (writeCorrelation(N, prefix, corr_func))
                     return ERR_FILE;
             }
             
@@ -172,29 +168,7 @@ int main()
     return 0;
 }
 
-string makePrefix(int q, int N, double T) {
-    string filename;
-    ostringstream T_2d;
-    T_2d << std::fixed << std::setprecision(2) << T;
-    std::string T_str = T_2d.str();
-    filename = to_string(q) + "," + to_string(L) + "," + T_str;
-    return filename;
-}
 
-int writeCorrelation(string prefix, complex<double> *corr_func) {
-    string corr_filename = "correlation," + prefix + ".csv";
-    ofstream corr_file(corr_filename);
-    
-    if (!corr_file.is_open())
-        return ERR_FILE;
-    for (int j=0; j<N; j++) {
-        //        cout << j << "," << Cr[j].real() << endl;
-        corr_file << j << "," << corr_func[j].real() << endl;
-    }
-    corr_file.close();
-    cout << "Correlation written to file: " + corr_filename << endl;
-    return 0;
-}
 
 // int writeMoment(string m_filename, double T, complex<double> m, double m1, double m2, double m4) {
 //     ofstream moment_file(m_filename, ios_base::app);
