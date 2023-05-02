@@ -19,6 +19,7 @@ def analytic_C(N, r, T):
     denom = 2*b**N + a**N
     return nom / denom 
 
+
 for T in Ts:
     plt.plot(r, analytic_C(N, r, T))
 plt.show()

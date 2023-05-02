@@ -15,12 +15,13 @@ int power(int base, int exp) {
     return result;
 }
 
+
 const int q = 3;                                // q spin states
 const int L = 16;                               // linear system size 
 const double T = 0.5;
 
 const int NDIMS = 2;                            // Number of dimensions 
-const int N = power(L, NDIMS);                                // Total number of spins 
+const int N = power(L, NDIMS);                  // Total number of spins 
 const double pconnect = 1 - exp(-1.0/T);        // connection probability 
 
 const int NCLUSTERS = 1;
@@ -35,7 +36,7 @@ vector <complex<double> > W(q);                 // returns mj-value given a cert
 // lattice handling: 
 enum dirs{RIGHT,LEFT, UP, DOWN};
 // int indx(int x){return x;}
-int indx(int x, int y){ return y * L + x; }                    // Make an index on every site 
+int indx(int x, int y){ return y * L + x; }     // Make an index on every site 
 int xpos(int i){ return i%L;}
 int ypos(int i){ return i/L;}
 
@@ -93,6 +94,14 @@ int main()
         complex<double> m(0., 0.);                          // Initialize (start with no magnetization)
         double m1 = 0., m2 = 0., m4 = 0.;
 
+        complex<double> m0c = 0.;                           //Initialize the corr_func factors
+        complex<double> mr[N],  m0cmr[N];                   // For all r's
+        for(int j=0; j<N; j++){                         
+                m0cmr[j] = 0;
+                mr[j] = 0;
+        }
+
+
         for(int t = 0; t < NMSTEPS; t++) {
             for(int c = 0; c < NCLUSTERS; c++)              //If NCLUSTERS>1, there are more than one cluster, and this will be start several flipandbuildfrom
                 FlipandBuildFrom(rand()%N);                 //Determines all of the states in the grid after the Wolff cluser algo
@@ -107,10 +116,32 @@ int main()
             double tm2 = tm1*tm1;
 
             m += tm; m1 += tm1; m2 += tm2; m4 += tm2*tm2;
+
+            //factors to calculate correlation:
+            m0c += conj(W[S[0]]);  
+            for(int j=0; j<N; j++){                         // For all the r's
+                m0cmr[j] += conj(W[S[0]]) * W[S[j]];
+                mr[j] += W[S[j]];
+            }
+
         }
 
-        m /= NMSTEPS; m1 /= NMSTEPS; m2 /= NMSTEPS; m4 /= NMSTEPS;
-        cout << m << " " << m1 << " " << m2 << " " << m4 << endl;
+        //Take the average: 
+        m /= NMSTEPS; m1 /= NMSTEPS; m2 /= NMSTEPS; m4 /= NMSTEPS; 
+        m0c/= NMSTEPS; 
+        for(int j=0; j<N; j++){
+            m0cmr[j] /= NMSTEPS; mr[j] /= NMSTEPS;
+        }
+
+        //calculating correlation function:
+        complex<double> corr_func[N];
+        for(int j=0; j<N; j++){
+            corr_func[j] = m0cmr[j] - m0c * mr[j];
+        }
+        
+        //Printing:
+        cout << m << " " << m1 << " " << m2 << " " << m4 << " "<< m0c << endl;
+        // cout << m0cmr[5] << endl;
     }
 
     return 0;
