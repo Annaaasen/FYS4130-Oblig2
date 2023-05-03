@@ -26,7 +26,7 @@ const int L = 32;                               // linear system size
 const double MAX_TEMP = 2.;
 const double TEMP_STEP = 0.02;
 
-const int NDIMS = 1;                            // Number of dimensions 
+const int NDIMS = 2;                            // Number of dimensions 
 const int N = power(L, NDIMS);                  // Total number of spins 
 
 const int NCLUSTERS = 1;
@@ -155,14 +155,14 @@ int main()
 
 
             //Writing to file: 
-            string prefix = makePrefix(q, L, T);
-            cout << prefix << endl;
-            if (NDIMS == 1 && (T == 0.25 || T == 0.5)) {
-                if (writeCorrelation(N, prefix, corr_func))
-                    return ERR_FILE;
-            }
+            // string prefix = makePrefix(q, L, T);
+            // cout << prefix << endl;
+            // if (NDIMS == 1 && (T == 0.25 || T == 0.5)) {
+            //     if (writeCorrelation(N, prefix, corr_func))
+            //         return ERR_FILE;
+            // }
 
-            string m_filename = to_string(L) + " magnetisations_vs_T.csv";
+            string m_filename = to_string(L) + " magnetisations_vs_T_2D.csv";
             if (writeMoment(m_filename, T, m, m1, m2, m4))
                 return ERR_FILE;
             
