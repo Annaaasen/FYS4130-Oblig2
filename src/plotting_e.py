@@ -1,6 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 import pandas as pd
+import plot_utils
 
 #Setting T = T/J and k_B=1
 
@@ -20,4 +21,12 @@ plt.plot(mag8["T"], gamma8)
 mag32 = pd.read_csv("32 magnetisations_vs_T_2D.csv", header=None, names=["T", "m", "m1", "m2", "m4"])
 gamma32 = mag32["m4"] / mag32["m2"]**2
 plt.plot(mag32["T"], gamma32)
+plt.show()
+
+
+plt.plot(mag16["T"], gamma16)
+plt.plot(mag8["T"], gamma8)
+plt.plot(mag32["T"], gamma32)
+plt.xlim((0.985, 0.99))
+plt.ylim((1.12, 1.13))
 plt.show()
