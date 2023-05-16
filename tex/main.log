@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.7)  3 MAY 2023 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.7)  5 MAY 2023 11:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,14 +403,14 @@ LaTeX Font Info:    ... okay on input line 11.
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
+* \@twocolumntrue
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -463,30 +463,106 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./sections/2.tex)
+
+
+] (./sections/2.tex
+Overfull \hbox (60.95767pt too wide) detected at line 33
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+<./figs//../figs/plot_b.pdf, id=15, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/plot_b.pdf Graphic file (type pdf)
+<use ./figs//../figs/plot_b.pdf>
+Package pdftex.def Info: ./figs//../figs/plot_b.pdf  used on input line 71.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+
+Underfull \vbox (badness 2635) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 
+      [2
+
+]
+<./figs//../figs/m_T_2.pdf, id=39, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/m_T_2.pdf Graphic file (type pdf)
+<use ./figs//../figs/m_T_2.pdf>
+Package pdftex.def Info: ./figs//../figs/m_T_2.pdf  used on input line 86.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+<./figs//../figs/m_T_20.pdf, id=40, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/m_T_20.pdf Graphic file (type pdf)
+<use ./figs//../figs/m_T_20.pdf>
+Package pdftex.def Info: ./figs//../figs/m_T_20.pdf  used on input line 87.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figs//../figs/m2_T_2.pdf, id=42, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/m2_T_2.pdf Graphic file (type pdf)
+<use ./figs//../figs/m2_T_2.pdf>
+Package pdftex.def Info: ./figs//../figs/m2_T_2.pdf  used on input line 106.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+<./figs//../figs/m2_T_20.pdf, id=43, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/m2_T_20.pdf Graphic file (type pdf)
+<use ./figs//../figs/m2_T_20.pdf>
+Package pdftex.def Info: ./figs//../figs/m2_T_20.pdf  used on input line 107.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.114 
+       [3 <./figs//../figs/plot_b.pdf> <./figs//../figs/m_T_2.pdf> <./figs//../figs/m_T_20.pdf>]
+<./figs//../figs/gamma_T.pdf, id=90, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/gamma_T.pdf Graphic file (type pdf)
+<use ./figs//../figs/gamma_T.pdf>
+Package pdftex.def Info: ./figs//../figs/gamma_T.pdf  used on input line 150.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+<./figs//../figs/gamma_T_zoom.pdf, id=91, 462.52798pt x 346.89601pt>
+File: ./figs//../figs/gamma_T_zoom.pdf Graphic file (type pdf)
+<use ./figs//../figs/gamma_T_zoom.pdf>
+Package pdftex.def Info: ./figs//../figs/gamma_T_zoom.pdf  used on input line 151.
+(pdftex.def)             Requested size: 207.69489pt x 155.77357pt.
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \end{document}
-                    [2] (./main.aux)
+                    [4 <./figs//../figs/m2_T_2.pdf> <./figs//../figs/m2_T_20.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \end{document}
+                    [5 <./figs//../figs/gamma_T.pdf> <./figs//../figs/gamma_T_zoom.pdf>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16264 strings out of 478268
- 273928 string characters out of 5846348
- 587978 words of memory out of 5000000
- 34284 multiletter control sequences out of 15000+600000
- 474808 words of font info for 49 fonts, out of 8000000 for 9000
+ 16376 strings out of 478268
+ 276451 string characters out of 5846348
+ 609959 words of memory out of 5000000
+ 34371 multiletter control sequences out of 15000+600000
+ 477162 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,6n,91p,468b,324s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (2 pages, 35712 bytes).
+ 83i,10n,91p,876b,412s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (5 pages, 318425 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

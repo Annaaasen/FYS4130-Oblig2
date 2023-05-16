@@ -1,6 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 import pandas as pd
+import plot_utils
 
 #Setting T = T/J and k_B=1
 
@@ -33,9 +34,17 @@ num_rs = np.array([corr_025["r"], corr_05["r"]])
 #####################
 ### Plotting part ###
 ####################
-for T, corr, num_r in zip(Ts, corrs, num_rs):
-    plt.plot(r, analytic_C(N, r, T))
-    plt.scatter(num_r, corr)
+ana_labels = ["Exact T=0.25", "Exact T=0.5"]
+num_labels = ["Num T=0.25", "Num T=0.5"]
+for T, corr, num_r, ana_label, num_label in zip(Ts, corrs, num_rs, ana_labels, num_labels):
+    plt.plot(r, analytic_C(N, r, T), label=ana_label)
+    plt.scatter(num_r, corr, label=num_label)
+plt.xlabel("r")
+plt.ylabel("C(r)")
+plt.xlim((-0.5, 27))
+plt.legend()
+# plt.title(r"Comparing analytical and numerical solution of $C(r)$")
+plt.savefig("../tex/figs/plot_b.pdf")
 plt.show()
 
 

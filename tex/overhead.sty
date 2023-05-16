@@ -22,7 +22,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[font={footnotesize}, labelfont=bf]{caption}
 \usepackage{enumitem}
 \usepackage{listings}
 
@@ -58,9 +58,9 @@
 \newcommand{\exptext}[1]{\operatorname{exp}\pclosed{#1}}
 \newcommand{\dimof}[1]{\bigl[#1\bigr]}
 \newcommand{\normal}[2]{\operatorname{\mathcal{N}}\pclosed{#1,#2}}
+\renewcommand{\expval}[1]{\ensuremath{\left\langle#1\right\rangle}}
 
 \newcommand{\distas}{\overset{d}{\sim}}
-\renewcommand{\expval}{\operatorname{\mathbb{E}}}
 \DeclareMathOperator{\mse}{MSE}
 \renewcommand{\var}{\operatorname{Var}}
 \newcommand{\bias}{\operatorname{Bias}}

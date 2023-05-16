@@ -40,7 +40,6 @@ vector <complex<double> > W(q);                 // returns mj-value given a cert
 
 // lattice handling: 
 enum dirs{RIGHT,LEFT, UP, DOWN};
-// int indx(int x){return x;}
 int indx(int x, int y){ return y * L + x; }     // Make an index on every site 
 int xpos(int i){ return i%L;}
 int ypos(int i){ return i/L;}
@@ -162,9 +161,9 @@ int main()
             //         return ERR_FILE;
             // }
 
-            string m_filename = to_string(L) + " magnetisations_vs_T_2D.csv";
-            if (writeMoment(m_filename, T, m, m1, m2, m4))
-                return ERR_FILE;
+            // string m_filename = to_string(L) + " magnetisations_vs_T_2D.csv";
+            // if (writeMoment(m_filename, T, m, m1, m2, m4))
+            //     return ERR_FILE;
             
 
             //Printing:
